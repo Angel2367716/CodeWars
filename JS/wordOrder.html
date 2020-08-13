@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        /* Box-model */
+        padding: 0; /* Positioning */
+        margin: 0;
+        font: inherit; /* Typography */
+        font-size: 100%;
+        vertical-align: baseline; /* Visual */
+        border: 0;
+      } /* HTML5 display-role reset for older browsers */
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        /* Misc */
+        content: "";
+        content: none;
+      }
+      table {
+        border-spacing: 0; /* Visual */
+        border-collapse: collapse;
+      }
+
+      .container {
+        position: absolute;
+        margin: auto;
+        padding: 1.5rem;
+        background-color: lightgray;
+        height: 100%;
+      }
+      p,
+      li {
+        margin: 10px;
+        padding: 5px;
+      }
+      h1 {
+        text-align: center;
+        font-size: large;
+        background: white;
+        padding-bottom: 0.5rem;
+        width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
+      }
+      .left {
+        float: left;
+        width: 48%;
+        background: white;
+        height: 40%;
+      }
+      .right {
+        float: right;
+        width: 48%;
+        background: white;
+        height: 40%;
+      }
+      #output {
+        width: 100%;
+        overflow: auto;
+        clear: both;
+        color: #fff;
+        background: #394549;
+      }
+      @media screen and (max-width: 500px) {
+        .container {
+          width: 600px;
+          height: 100%;
+        }
+
+        .left {
+          width: 100%;
+          margin-bottom: 1.5rem;
+        }
+
+        .right {
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 1200px) {
+        .container {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Instructions</h1>
+      <br />
+      <section class="left">
+        <p>
+          Your task is to sort a given string. Each word in the string will
+          contain a single number. This number is the position the word should
+          have in the result. Note: Numbers can be from 1 to 9. So 1 will be the
+          first word (not 0).
+          <br /><br />
+          If the input string is empty, return an empty string. The words in the
+          input String will only contain valid consecutive numbers.
+        </p>
+      </section>
+
+      <section class="right">
+        <p style="text-align: center;">
+          Example
+        </p>
+        <hr />
+
+        <ul>
+          <li>"is2 Thi1s T4est 3a" --> "Thi1s is2 3a T4est"</li>
+          <br />
+          <li>
+            "4of Fo1r pe6ople g3ood th5e the2" --> "Fo1r the2 g3ood 4of th5e
+            pe6ople"
+          </li>
+          <br />
+          <li>"" --> ""</li>
+          <br />
+        </ul>
+      </section>
+      <br />
+      <section id="output">
+        <h2>Test</h2>
+      </section>
+    </div>
+
+    <script type="text/javascript">
+      function order(words) {
+        console.log("Original input: " + words);
+      }
+
+      answer = order("is2 Thi1s T4est 3a");
+    </script>
+  </body>
+</html>
