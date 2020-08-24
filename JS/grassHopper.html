@@ -67,13 +67,12 @@
     </div>
 
     <script type="text/javascript">
-      document.getElementById("attempt").innerHTML = checkAlive();
+      document.getElementById("attempt").innerHTML = checkAlive("test");
 
       function checkAlive (health) {
-  if () {
-    health < 0
+  if (health <= 0) {
     return false
-  } else () {
+  } else {
     return true
   }
 }
