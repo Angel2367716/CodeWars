@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CodeMirror</title>
+    <!-- <script src="./codemirror/lib/codemirror.js"></script> -->
+    <script src="https://drive.google.com/uc?export=view&id=19LdKOw6VbEFt-8EWYtzMHC-_GazyYvBV"></script>
+        
+
+    <!-- <link rel="stylesheet" href="./codemirror/lib/codemirror.css"> -->
+    <link rel="stylesheet" href="https://drive.google.com/uc?export=view&id=1wfFCcn8yMWNQnThymf-YiUYW1cWTkFkv">
+    
+
+    
+
+    <!-- <script src="./codemirror/mode/javascript/javascript.js"></script> -->
+    <script src="https://drive.google.com/uc?export=view&id=1D3aUBXId9Br8mhNhoXY0n3hAHQkXONoQ"></script>
+    
+   
+    <!-- <script src="./codemirror/addon/edit/closetag.js"></script> -->
+    <script src="https://drive.google.com/uc?export=view&id=1tIpT6Ppd3_ihvLuDNsNJJnNR5x34tN7u"></script>
+    
+    
+    <!-- <link rel="stylesheet" href="./codemirror/theme/dracula.css"> -->
+    <link rel="stylesheet" href="https://drive.google.com/uc?export=view&id=1DbSSBNciUGTgEBAkaVhGuZygamrMiG1d">
+    
+
+</head>
+<body>
+    <h1>TextArea Element</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nesciunt, adipisci delectus aperiam vero atque, obcaecati eos tenetur expedita architecto sapiente molestiae reprehenderit fuga autem? Fugiat quisquam ex cum alias?</p>
+
+    <textarea id="editor"></textarea>
+
+    <script>
+        let editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
+            mode:"javascript",
+            theme:"dracula",
+            lineNumbers: true,
+            autoCloseTags: true
+        });
+    </script>
+</body>
+</html>
