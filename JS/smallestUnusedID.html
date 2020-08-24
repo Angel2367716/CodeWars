@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smallest Unused ID</title>
+    <style>
+        /* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { /* Box-model */ padding: 0; /* Positioning */ margin: 0; font: inherit; /* Typography */ font-size: 100%; vertical-align: baseline; /* Visual */ border: 0; } /* HTML5 display-role reset for older browsers */ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { /* Misc */ content: ""; content: none; } table { border-spacing: 0; /* Visual */ border-collapse: collapse; }body { overflow-x:hidden; } .container { position: absolute; margin: auto; background-color: lightgray; height: 100%; overflow: auto; } p, li { margin: 10px; padding: 5px; } h1 { text-align: center; font-size: large; background: white; padding-bottom: 0.5rem; width: 40%; margin-left: 30%; margin-right: 30%; } h3 { text-align: center; font-size: 1.5rem; padding-top: 0.5rem; }/*---------------- Upper Section ----------------*/ #top{ height:5%; margin-bottom: 1rem; margin-top: 1rem }/*---------------- Middle section ----------------*/ #middle{ height:75%; }.wrapper { height: 100%; } .left { float: left; width: 48%; background: white; height: 95%; } .right { float: right; width: 48%; height:95%; background: white; }.center { display: block; margin-left: auto; margin-right: auto; width: 50%; }.box-deco { border: 1px solid black; padding: 0rem .2rem; border-radius: 1px; line-height: 2; }/*---------------- Bottom section ----------------*/ #bottom{ height:20% } #output { position: relative; width: 100%; height: 5rem; overflow: unset; clear: both; color: #fff; background: #394549; border: 1px solid #eee; }/* .output-wrapper { height:20%; } *//*---------------- Media ----------------*/ @media screen and (max-width: 500px) { .left { width: 100%; height:auto; margin-bottom: 1.5rem; } .right { width: 100%; } } @media screen and (max-width: 1800px) { .container { width: 100%; } }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div id="top">
+            <h1>Smallest Unused ID - lvl 8 kyu</h1>
+            <br><br/>
+        </div>
+      
+        <div id="middle">    
+            <div class="wrapper">
+        <section class="left">
+            <h3>Instructions</h3><hr>
+          <p>
+            Hey awesome programmer!
+            <br><br>
+            You've got much data to manage and of course you use zero-based and non-negative ID's to make each data item unique!
+            <br><br>
+            Therefore you need a method, which returns the smallest unused ID for your next new data item...
+            <br><br>
+            Note: The given array of used IDs may be unsorted. For test reasons there may be duplicate IDs, but you don't have to find or remove them!
+            <br><br>
+            Go on and code some pure awesomeness!
+            <!-- <span class="box-deco">checkAlive</span> / 
+            <span class="box-deco">CheckAlive</span> / 
+            <span class="box-deco">check_alive</span>.  -->
+          </p>
+        </section>
+
+        <section class="right">
+          <h3>
+            Sample Test:
+          </h3>
+          <hr />
+          <p>
+          describe('method: nextId', function() { <br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;it('returns the lowestNextId', function() { <br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Test.assertEquals(nextId([0,1,2,3,5]), 4);<br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp; });<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;it('returns the lowestNextId', function() {<br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Test.assertEquals(nextId([0,1,2,3,4,5,6,7,8,9,10]), 11);<br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}); <br><br>
+          });
+         </p>
+         <div>
+          <!-- Placeholder image -->
+            <!-- <a href="http://#"><img src="#" title="source: imgur.com" class="center"/></a> -->
+
+          <!-- Placeholder list -->
+            <!-- <ol>
+                <li>
+                    #            
+                </li>
+                <li>
+                    #
+                </li>
+                <li>
+                    #
+                </li>
+            </ol> -->
+         </div>
+        </section>
+        <br />
+            </div>
+        </div>
+
+        <div id="bottom">
+            <div class="output-wrapper">
+            <section id="output">
+                <h3>Output</h3>
+            
+                <h4>Attempt: <span id="attempt"></span></h4>
+            </section>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+      document.getElementById("attempt").innerHTML = nextId();
+
+      function nextId(ids){
+        //this will be awesome!
+         return 0;
+    }
+    </script>
+  </body>
+</html>
