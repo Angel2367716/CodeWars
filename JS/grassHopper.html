@@ -5,22 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grasshopper - conditional debug</title>
     <style>
-/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { /* Box-model */ padding: 0; /* Positioning */ margin: 0; font: inherit; /* Typography */ font-size: 100%; vertical-align: baseline; /* Visual */ border: 0; } /* HTML5 display-role reset for older browsers */ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { /* Misc */ content: ""; content: none; } table { border-spacing: 0; /* Visual */ border-collapse: collapse; } .container { position: absolute; margin: auto; padding: 1.5rem; background-color: lightgray; /* height: 100%; width: 100%; */ overflow: auto; } p, li { margin: 10px; padding: 5px; } h1 { text-align: center; font-size: large; background: white; padding-bottom: 0.5rem; width: 40%; margin-left: 30%; margin-right: 30%; }h3 { text-align: center; font-size: 1.5rem; padding-top: 0.5rem; } .wrapper { height: 100%; } .left { float: left; width: 48%; background: white; height: 15rem; } .right { float: right; width: 48%; background: white; height: 15rem; } #output { position: relative; width: 100%; height: 15rem; overflow: unset; clear: both; color: #fff; background: #394549; border: 1px solid #eee; }.center { display: block; margin-left: auto; margin-right: auto; width: 50%; } @media screen and (max-width: 500px) { .container { width: 600px; height: 100%; }.left { width: 100%; margin-bottom: 1.5rem; }.right { width: 100%; } }@media screen and (max-width: 1800px) { .container { width: 100%; } }
+        /* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { /* Box-model */ padding: 0; /* Positioning */ margin: 0; font: inherit; /* Typography */ font-size: 100%; vertical-align: baseline; /* Visual */ border: 0; } /* HTML5 display-role reset for older browsers */ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { /* Misc */ content: ""; content: none; } table { border-spacing: 0; /* Visual */ border-collapse: collapse; }body { overflow-x:hidden; } .container { position: absolute; margin: auto; background-color: lightgray; height: 100%; overflow: auto; } p, li { margin: 10px; padding: 5px; } h1 { text-align: center; font-size: large; background: white; padding-bottom: 0.5rem; width: 40%; margin-left: 30%; margin-right: 30%; } h3 { text-align: center; font-size: 1.5rem; padding-top: 0.5rem; }/*---------------- Upper Section ----------------*/ #top{ height:5%; margin-bottom: 1rem; }/*---------------- Middle section ----------------*/ #middle{ height:75%; }.wrapper { height: 100%; } .left { float: left; width: 48%; background: white; height: 95%; } .right { float: right; width: 48%; height:95%; background: white; }.center { display: block; margin-left: auto; margin-right: auto; width: 50%; }.box-deco { border: 1px solid black; padding: 0rem .2rem; border-radius: 1px; line-height: 2; }/*---------------- Bottom section ----------------*/ #bottom{ height:20% } #output { position: relative; width: 100%; height: 5rem; overflow: unset; clear: both; color: #fff; background: #394549; border: 1px solid #eee; }/* .output-wrapper { height:20%; } *//*---------------- Media ----------------*/ @media screen and (max-width: 500px) { .left { width: 100%; height:auto; margin-bottom: 1.5rem; } .right { width: 100%; } } @media screen and (max-width: 1800px) { .container { width: 100%; } }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>Battle lvl 8 kyu</h1>
-      <br />
-      <div class="wrapper">
+        <div id="top">
+            <h1>Grasshopper lvl 8 kyu</h1>
+            <br><br/>
+        </div>
+      
+        <div id="middle">    
+            <div class="wrapper">
         <section class="left">
             <h3>If/else syntax debug</h3><hr>
           <p>
-            While making a game, your partner, Greg, decided to create a function to check if the user is still alive called checkAlive/CheckAlive/check_alive. Unfortunately, Greg made some errors while creating the function.
+            While making a game, your partner, Greg, decided to create a function to check if the user is still alive called 
+            <span class="box-deco">checkAlive</span> / 
+            <span class="box-deco">CheckAlive</span> / 
+            <span class="box-deco">check_alive</span>. Unfortunately, Greg made some errors while creating the function.
             <br /><br />
-            checkAlive/CheckAlive/check_alive should return true if the player's health is greater than 0 or false if it is 0 or below.
+            <span class="box-deco">checkAlive</span> / 
+            <span class="box-deco">CheckAlive</span> / 
+            <span class="box-deco">check_alive</span> should return true if the player's health is greater than 0 or false if it is 0 or below.
             <br /><br />
             The function receives one parameter health which will always be a whole number between -10 and 10.
+
           </p>
         </section>
 
@@ -35,22 +45,25 @@
             <li>
                 Test.assertEquals(checkAlive(5), true)            
             </li>
-            <br />
             <li>
                 Test.assertEquals(checkAlive(0), false)
             </li>
-            <br />
             <li></li>
-            <br />
           </ol>
         </section>
         <br />
-        <section id="output">
-          <h3>Output</h3>
+            </div>
+        </div>
 
-          <h4>Attempt: <span id="attempt"></span></h4>
-        </section>
-      </div>
+        <div id="bottom">
+            <div class="output-wrapper">
+            <section id="output">
+                <h3>Output</h3>
+            
+                <h4>Attempt: <span id="attempt"></span></h4>
+            </section>
+            </div>
+        </div>
     </div>
 
     <script type="text/javascript">
