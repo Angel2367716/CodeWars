@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mean Array</title>
+    <style>
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { /* Box-model */ padding: 0; /* Positioning */ margin: 0; font: inherit; /* Typography */ font-size: 100%; vertical-align: baseline; /* Visual */ border: 0; } /* HTML5 display-role reset for older browsers */ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { /* Misc */ content: ""; content: none; } table { border-spacing: 0; /* Visual */ border-collapse: collapse; } .container { position: absolute; margin: auto; padding: 1.5rem; background-color: lightgray; /* height: 100%; width: 100%; */ overflow: auto; } p, li { margin: 10px; padding: 5px; } h1 { text-align: center; font-size: large; background: white; padding-bottom: 0.5rem; width: 40%; margin-left: 30%; margin-right: 30%; }h3 { text-align: center; font-size: 1.5rem; padding-top: 0.5rem; } .wrapper { height: 100%; } .left { float: left; width: 48%; background: white; height: 15rem; } .right { float: right; width: 48%; background: white; height: 15rem; } #output { position: relative; width: 100%; height: 15rem; overflow: unset; clear: both; color: #fff; background: #394549; border: 1px solid #eee; }.center { display: block; margin-left: auto; margin-right: auto; width: 50%; } @media screen and (max-width: 500px) { .container { width: 600px; height: 100%; }.left { width: 100%; margin-bottom: 1.5rem; }.right { width: 100%; } }@media screen and (max-width: 1800px) { .container { width: 100%; } }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Battle lvl 8 kyu</h1>
+      <br />
+      <div class="wrapper">
+        <section class="left">
+            <h3>Instructions</h3><hr>
+          <p>
+            It's the academic year's end, fateful moment of your school report. The averages must be calculated. All the students come to you and entreat you to calculate their average for them. The array will never be empty.
+            <br /><br />
+            Easy ! You just need to write a script. Return the average of the given array rounded down to its nearest integer.
+          </p>
+        </section>
+
+        <section class="right">
+          <h3>
+            Sample Test:
+          </h3>
+          <hr /></br>
+
+          <!-- <a href="http://#"><img src="#" title="source: imgur.com" class="center"/></a> -->
+          <ol>
+            <li>
+                Test.assertEquals(getAverage([2,2,2,2]),2);               
+            </li>
+            <br />
+            <li>
+                Test.assertEquals(getAverage([1,2,3,4,5,]),3);
+            </li>
+            <br />
+            <li> Test.assertEquals(getAverage([1,1,1,1,1,1,1,2]),1);</li>
+            <br />
+          </ol>
+        </section>
+        <br />
+        <section id="output">
+          <h3>Output</h3>
+
+          <h4>Attempt: <span id="attempt"></span></h4>
+        </section>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      document.getElementById("attempt").innerHTML = getAverage();
+
+      function getAverage(marks){
+        //TODO : calculate the downwar rounded average of the marks array
+        
+      //attempt #1 
+      marks = [6, 11, 24];
+      
+    //   return Math.floor(marks.reduce( function(x,y) { 
+    //       let answer = (x +y) / marks.length;
+    //       return answer
+    //     }));
+
+       
+    //    attempt #2
+        // marks = [6,11,24];
+        // return Math.floor(marks.reduce(function (x,y){
+        //     x+y /marks.length
+        // }))
+        // marks.reduce(
+        //     function (x,y){
+        //       let reducedNumber = x+y / marks.length;
+        //       const answer = Math.floor(reducedNumber);
+        //       console.log("answer type: " + answer);
+        //       return answer
+        //     })
+
+        //ATTEMPT #3
+        //calculates total number of array marks
+    //    let total = 0;
+    //    for (let i =0; i < marks.length; i++){
+    //        total += marks[i];
+    //    }
+    //    return Math.floor(total/marks.length);
+
+    // // ATTEMPT #4
+    // return Math.floor(marks.reduce((sum, x)=> sum +x) / marks.length)
+    // }
+ 
+    //ATTEMPT #5
+    return Math.floor(marks.reduce(
+        function(sum, x) {
+           return sum + x
+        }
+    )/ marks.length)
+    }
+    </script>
+  </body>
+</html>
